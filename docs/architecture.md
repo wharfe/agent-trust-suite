@@ -55,6 +55,15 @@ Agent Trust Suite consists of 4 components organized in 3 layers plus a shared s
 │   │ control,    │  │              │  │                  │  │
 │   │ delegation  │  │              │  │                  │  │
 │   └─────────────┘  └──────────────┘  └──────────────────┘  │
+│   ┌──────────────────┐                                     │
+│   │ @agentbond/      │                                     │
+│   │ settlement       │                                     │
+│   │                  │                                     │
+│   │ Settlement       │                                     │
+│   │ execution with   │                                     │
+│   │ provider         │                                     │
+│   │ registry         │                                     │
+│   └──────────────────┘                                     │
 │                                                             │
 │   Exposed as 17 MCP tools via Model Context Protocol        │
 └─────────────────────────────────────────────────────────────┘

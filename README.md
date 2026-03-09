@@ -52,25 +52,34 @@ agentcontract run my-agent.contract.yaml
 **agent-trust-telemetry** (Python) — Detect instruction contamination across agent traces
 
 ```bash
-pip install agent-trust-telemetry
-att evaluate message.json
-att stream --input trace.jsonl
+pip install agent-trust-telemetry          # if published
+# or install from source:
+git clone https://github.com/wharfe/agent-trust-telemetry.git
+cd agent-trust-telemetry && pip install -e ".[dev]"
+
+att evaluate --message message.json
+att evaluate --stream trace.jsonl
 ```
 
 **trustbundle** (Node.js) — Package execution traces into tamper-evident bundles
 
 ```bash
-npm install -g trustbundle
+npm install -g trustbundle               # if published
+# or install from source:
+git clone https://github.com/wharfe/trustbundle.git
+cd trustbundle && npm install && npm run build
+
 trustbundle init
-trustbundle build
-trustbundle verify
+trustbundle build <trace.jsonl>
+trustbundle verify <bundle.json>
 ```
 
 **agentbond** (Node.js monorepo) — Governance infrastructure with MCP Server
 
 ```bash
-git clone https://github.com/wharfe/agentbond.git
-cd agentbond && pnpm install && pnpm build
+npx @agentbond/mcp-server                # run MCP server directly
+# or use as a library:
+npm install @agentbond/auth @agentbond/intent @agentbond/contract @agentbond/settlement
 ```
 
 ### Coming Soon

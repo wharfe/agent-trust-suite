@@ -55,12 +55,12 @@ Each component can be used independently. agentbond integration is optional.
 
 - **Does:** Middleware for detecting instruction contamination and trust policy violations in agent-to-agent communication. Evaluates messages against trust schemas, produces risk scores, and generates reports.
 - **Does not:** Modify or block agent actions. It is an observation layer, not an enforcement layer.
-- **Install:** `pip install agent-trust-telemetry` (v0.1.0-alpha)
+- **Install:** `pip install agent-trust-telemetry` (v0.1.0-alpha) — if published; otherwise install from source: `pip install -e ".[dev]"`
 - **CLI:**
-  - `att evaluate <message.json>` — Evaluate a single message
-  - `att stream --input <trace.jsonl>` — Process JSONL message streams
-  - `att report` — Generate trust reports
-  - `att quarantine` — Quarantine flagged actions
+  - `att evaluate --message <message.json>` — Evaluate a single message
+  - `att evaluate --stream <trace.jsonl>` — Process JSONL message streams
+  - `att report --input <evaluations.jsonl>` — Generate trust reports
+  - `att quarantine list|release|clear` — Manage quarantined messages
 - **Input:** JSON messages or JSONL streams conforming to trust telemetry schema
 - **Output:** Trust evaluation results with risk scores and violation classifications
 - **Violation types:** 5 violation categories + anomaly indicators
@@ -105,16 +105,18 @@ Each component can be used independently. agentbond integration is optional.
 
 - **Does:** Governance infrastructure for autonomous AI agents. Provides authorization (token-based permissions, budget control, delegation), intent tracking, contract lifecycle management, and settlement. Exposes 17 tools via MCP Server.
 - **Does not:** Define behavioral contracts (that's agentcontract) or collect runtime telemetry (that's agent-trust-telemetry).
-- **Install:** Not yet published to npm. Clone from source:
+- **Install:** Published to npm.
   ```bash
-  git clone https://github.com/wharfe/agentbond.git
-  cd agentbond && pnpm install && pnpm build
+  npx @agentbond/mcp-server              # run MCP server directly
+  npm install @agentbond/auth             # use as library
   ```
 - **Packages:**
-  - `@agentbond/core` — Type definitions and shared interfaces
-  - `@agentbond/auth` — Token-based authorization engine
-  - `@agentbond/intent` — Intent tracking and evidence
-  - `@agentbond/contract` — Contract lifecycle management
+  - `@agentbond/core` (v0.1.1) — Type definitions and shared interfaces
+  - `@agentbond/auth` (v0.1.1) — Token-based authorization engine
+  - `@agentbond/intent` (v0.1.1) — Intent tracking and evidence
+  - `@agentbond/contract` (v0.1.0) — Contract lifecycle management
+  - `@agentbond/settlement` (v0.1.0) — Settlement execution with provider registry
+  - `@agentbond/mcp-server` (v0.1.2) — MCP server exposing all layers
 - **MCP Server:** 17 tools exposed via Model Context Protocol
 - **Authorization codes:** `ALLOWED`, `TOKEN_EXPIRED`, `BUDGET_EXCEEDED`, etc.
 - **Build:** pnpm workspaces + turborepo
