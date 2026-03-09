@@ -127,15 +127,34 @@ Each component can be used independently. agentbond integration is optional.
 
 ---
 
+## agent-trust-cli
+
+- **Does:** Unified CLI entry point for the suite. Provides `demo`, `verify`, and `inspect` commands that orchestrate the other tools.
+- **Does not:** Implement detection, bundling, or governance logic. It delegates to existing tools.
+- **Install:** `npm install -g agent-trust-cli` (v0.1.0)
+- **CLI:**
+  - `agent-trust demo` — Run the trust lifecycle demo (contract → telemetry → bundle)
+  - `agent-trust verify <bundle.json>` — Verify trust bundle integrity
+  - `agent-trust inspect <file>` — Auto-detect and display contract, bundle, or message envelope
+- **Dependencies:** `trustbundle`, `js-yaml`, `commander`. Optional runtime: `att` (for live demo evaluation)
+- **Node:** >=20
+- **Suite position:** Distribution surface — single entry point for the suite
+- **Status:** Early (0.1.0) — CLI name may change
+- **Source:** https://github.com/wharfe/agent-trust-cli
+
+---
+
 ## Recommended Exploration Order
 
-1. **agentcontract** — Start here to understand contract definition
-2. **trustbundle** — See how execution traces are packaged
-3. **agent-trust-telemetry** — Explore runtime trust observation
-4. **agentbond** — Understand the governance substrate
+1. **agent-trust-cli** — Try `npx agent-trust-cli demo` for a 60-second overview
+2. **agentcontract** — Understand contract definition
+3. **trustbundle** — See how execution traces are packaged
+4. **agent-trust-telemetry** — Explore runtime trust observation
+5. **agentbond** — Understand the governance substrate
 
 ## Suite-Level Resources
 
 - Suite overview: [README.md](README.md)
 - Architecture details: [docs/architecture.md](docs/architecture.md)
-- Demo scenario design: [demo/README.md](demo/README.md)
+- Demo scenario: [demo/README.md](demo/README.md)
+- Unified CLI: [agent-trust-cli](https://github.com/wharfe/agent-trust-cli)
