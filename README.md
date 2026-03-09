@@ -37,7 +37,24 @@ As multi-agent systems grow through protocols like [A2A](https://github.com/goog
 
 ## Quick Start
 
-### Today
+### Try the Demo
+
+See the full trust lifecycle in 60 seconds — no API keys required:
+
+```bash
+npx agent-trust-cli demo
+```
+
+Or use individual commands:
+
+```bash
+npx agent-trust-cli verify bundle.json       # Verify a trust bundle
+npx agent-trust-cli inspect contract.yaml    # Inspect any trust artifact
+```
+
+> For live telemetry evaluation in the demo, also install: `pip install agent-trust-telemetry`
+
+### Individual Tools
 
 Each tool can be used independently. Pick the layer relevant to your use case:
 
@@ -82,9 +99,9 @@ npx @agentbond/mcp-server                # run MCP server directly
 npm install @agentbond/auth @agentbond/intent @agentbond/contract @agentbond/settlement
 ```
 
-### Coming Soon
+### Unified CLI
 
-A unified CLI experience for running cross-layer trust verification in a single command. CLI name and implementation details are not yet finalized.
+[agent-trust-cli](https://github.com/wharfe/agent-trust-cli) provides a single entry point with `demo`, `verify`, and `inspect` commands. CLI name may change in future releases.
 
 ## Architecture
 
