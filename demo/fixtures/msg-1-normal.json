@@ -1,0 +1,16 @@
+{
+  "message_id": "msg:a1b2c3d4-1111-4000-a000-000000000001",
+  "parent_message_id": null,
+  "timestamp": "2026-03-09T10:00:00Z",
+  "sender": "agent-b",
+  "receiver": "agent-a",
+  "channel": "a2a",
+  "role": "content",
+  "execution_phase": "data_retrieval",
+  "session_id": "demo-session-001",
+  "trace_id": "demo-trace-001",
+  "turn_index": 0,
+  "provenance": ["agent-a", "agent-b"],
+  "content": "I've retrieved the public dataset from /data/public/report.csv. The file contains 1,247 records covering Q1-Q3 2025 sales data.",
+  "content_hash": "sha256:acf7ddd596d5f06bb357a89b6667ae48365a9f6acbf8f224bacbb0ac183c5fbc"
+}

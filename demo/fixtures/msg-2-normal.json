@@ -1,0 +1,16 @@
+{
+  "message_id": "msg:a1b2c3d4-2222-4000-a000-000000000002",
+  "parent_message_id": "msg:a1b2c3d4-1111-4000-a000-000000000001",
+  "timestamp": "2026-03-09T10:01:00Z",
+  "sender": "agent-b",
+  "receiver": "agent-a",
+  "channel": "a2a",
+  "role": "content",
+  "execution_phase": "synthesis",
+  "session_id": "demo-session-001",
+  "trace_id": "demo-trace-001",
+  "turn_index": 1,
+  "provenance": ["agent-a", "agent-b"],
+  "content": "Summary complete. Key findings: Total revenue increased 23% YoY. Top performing region: APAC with 34% growth. Full report available in the shared workspace.",
+  "content_hash": "sha256:460f75c1c47d8d3874bc92391bf5c12c4e6467298e879ec8697ffbcdeb5d5401"
+}
