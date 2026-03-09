@@ -7,6 +7,10 @@ As multi-agent systems grow through protocols like [A2A](https://github.com/goog
 
 **Agent Trust Suite** is an open-source collection of tools that makes agent behavior **observable and verifiable** across the execution lifecycle.
 
+<p align="center">
+  <img src="demo/demo.gif" alt="Agent Trust Suite Demo — contract → observation → evidence" width="800" />
+</p>
+
 ## What This Suite Helps You Verify
 
 - That agents act within pre-agreed contracts
