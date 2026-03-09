@@ -2,6 +2,8 @@
 docs/oss-dev-guidelines.md
 docs/CLAUDE_CODE_INSTRUCTIONS.md
 docs/STRATEGY.md
+docs/DECISIONS.md
+docs/WORKPLAN.md
 
 # Zone.Identifier files (Windows/WSL)
 *:Zone.Identifier
