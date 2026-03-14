@@ -57,7 +57,7 @@ bash run-demo.sh
 [contract]   ✓ Contract defines read-only scope for research-assistant agent
 [telemetry]  ✓ Message 1: PASS (risk: 0, action: observe)
 [telemetry]  ✓ Message 2: PASS (risk: 0, action: observe)
-[telemetry]  ✗ Message 3: VIOLATION (risk: 85, severity: high, action: quarantine)
+[telemetry]  ✗ Message 3: VIOLATION (risk: 100, severity: high, action: quarantine)
                Policy violations:
                - instruction_override (confidence: 0.85)
                - exfiltration_attempt (confidence: 0.8)
